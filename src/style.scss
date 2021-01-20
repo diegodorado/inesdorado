@@ -1,9 +1,12 @@
-$items: 7;
+$items: 13;
 $animation-time: 5s;
 $transition-time: .5s;
 $scale: 20%;
 $total-time: ($animation-time * $items);
 $scale-base-1: (1 + $scale / 100%);
+
+$md: "min-width: 768px";
+$lg: "min-width: 1280px";
 
 .slideshow {
   position: absolute;
@@ -79,23 +82,42 @@ $scale-base-1: (1 + $scale / 100%);
   text-align: center;
   background-color: rgba(255,255,255,.7);
   box-shadow: 0 1em 2em -1em rgba(0,0,0,.5);
-  padding: 2em 3em;
+  padding: 1.5em 2.5em;
   border-radius: 10px;
   h1{
-    font-family: 'Caveat', cursive;
-    font-size: 4em;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.5em;
+    @media ($md) { font-size: 3em; }
+    @media ($lg) { font-size: 4em; }
     font-weight: 400;
     margin: 0;
     padding: 0;
-    margin-bottom: 0.4em;
   }
-  a {
-    display: inline-block;
-    margin: 0 2em;
-    img{
-      width: 3em;
+  p{
+    font-family: 'Caveat', cursive;
+    font-size: 1.25em;
+    @media ($md) { font-size: 2em; }
+    @media ($lg) { font-size: 2em; }
+    margin: 0 0 1em;
+  }
+  nav{
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    a {
+      flex: 1 0 0;
+      max-width: 3em;
+      transition: transform 0.2s linear;
+      &:hover{
+        transform: scale(1.1)
+      }
     }
   }
+
+  .card {
+      font-size: 1.2rem;
+  }
+
 }
 
 html,body{
