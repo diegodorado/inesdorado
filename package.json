@@ -1,5 +1,6 @@
 {
-  "name": "mechadorado",
+  "name": "inesdorado",
+  "repository": "https://github.com/diegodorado/inesdorado",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -8,7 +9,7 @@
     "build": "parcel build src/index.html"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
+    "parcel-bundler": "^1.12.3",
     "sass": "^1.32.4"
   }
 }
