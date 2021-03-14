@@ -10,7 +10,7 @@ RUN npm run build
 #COPY package.json ./
 #COPY package-lock.json ./
 COPY . ./
-RUN npm install
+RUN npm --verbose install
 RUN npm run build
 
 # production environment
