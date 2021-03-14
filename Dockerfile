@@ -2,12 +2,13 @@
 FROM node:14.16-alpine as builder
 RUN mkdir /app
 WORKDIR /app
-#ENV PATH /app/node_modules/.bin:$PATH
 
 COPY package.json ./
 COPY package-lock.json ./
-RUN npm --verbose install
+RUN npm install
 
+# separate COPY package from the rest of the app
+# to do npm install on package.json change only
 COPY . .
 RUN npm run build
 
