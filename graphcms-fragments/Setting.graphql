@@ -1,0 +1,23 @@
+fragment Setting on Setting {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  slideshow {
+    ... on Asset {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
+      stage
+    }
+  }
+  presentation {
+    ... on RichText {
+      raw
+      html
+      markdown
+      text
+    }
+  }
+}
