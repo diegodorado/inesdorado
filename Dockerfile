@@ -7,6 +7,7 @@ RUN apk add --no-cache \
     bash \
     g++ \
     libc6-compat \
+    libtool \
     libjpeg-turbo-dev \
     libpng-dev \
     make \
